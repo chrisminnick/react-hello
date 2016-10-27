@@ -9,7 +9,8 @@ class App extends Component {
         super(props);
         this.state = {
             currentExcuse: 'test excuse'
-        }
+        };
+        this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
 
@@ -21,7 +22,7 @@ class App extends Component {
       <div className="App">
           <Header />
           <OutputArea excuse={this.state.currentExcuse}/>
-          <Button clickEvent = {this.handleClick.bind(this)}
+          <Button clickEvent = {this.handleClick}
               name="Get Excuse" />
           
       </div>
